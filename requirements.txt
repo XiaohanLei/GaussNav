@@ -1,0 +1,5 @@
+scikit-fmm
+scikit-learn
+scikit-image
+numpy
+ifcfg
