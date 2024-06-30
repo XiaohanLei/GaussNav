@@ -1,0 +1,78 @@
+# @package _global_
+
+defaults:
+
+  - /habitat: habitat_config_base
+  - /habitat/task: instance_imagenav
+  - /habitat/simulator/agents@habitat.simulator.agents.main_agent: rgbd_agent
+  - /habitat/dataset/instance_imagenav: hm3d_v3
+  - _self_
+
+
+
+habitat:
+
+  environment:
+    max_episode_seconds: 1000
+  simulator:
+    agents:
+      main_agent:
+        sim_sensors:
+          rgb_sensor:
+            width: 480
+            height: 640
+            hfov: 42
+            position: [0, 0.88, 0]
+          depth_sensor:
+            width: 480
+            height: 640
+            hfov: 42
+            min_depth: 0.01
+            max_depth: 15.0
+            position: [0, 0.88, 0]
+          # semantic_sensor:
+          #   width: 480
+          #   height: 640
+          #   hfov: 42
+          #   position: [0, 0.88, 0]
+        height: 0.88
+        radius: 0.17
+    habitat_sim_v0:
+      gpu_device_id: 0
+      allow_sliding: True
+  dataset:
+    split: val_mini
+
+end2end_imagenav:
+  env_name: instance_imagenav 
+  dump_location: "examples/"
+  max_episodes: 500
+  num_envs: 1
+  num_gpus: 2
+  num_nodes: 1
+  split: val_mini
+  node_id: 0
+  gpu_id: 0
+  checkpoint_folder: data/new_checkpoints
+  log_interval: 10
+  num_checkpoints: 100
+  # Force PyTorch to be single threaded as
+  # this improves performance considerably
+  force_torch_single_threaded: True
+
+  viz_params:
+    viz: False
+    viz_failure_case: True
+
+  particle_params:
+    method: 1 # 0 means hist, 1 means DISK + LightGlue
+    remap_goal: True # True means remap the goal to the same cat
+
+
+  mapper:
+    frame_height: 320
+    frame_width: 240
+    map_resolution: 5
+    map_size_cm: 3600
+    global_downscaling: 3
+
