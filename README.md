@@ -39,7 +39,7 @@ python run.py
 
 ## Some tips
 - If you want to use our code base to build your own project, you can write your own envs in `GaussianNavigation\vector_env\envs`
-- If you still have issues, feel free to open issues
+- If you have any questions, feel free to open issues
 
 
 
