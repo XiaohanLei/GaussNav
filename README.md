@@ -1,5 +1,7 @@
 # GaussNav
 
+[![GaussNav](https://img.youtube.com/vi/FaNMKMDKrkA/maxresdefault.jpg)](https://youtu.be/FaNMKMDKrkA)
+
 PyTorch implementation of paper: GaussNav: Gaussian Splatting for Visual Navigation
 
 [Project Page](https://xiaohanlei.github.io/projects/GaussNav/)<br />
