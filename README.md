@@ -10,11 +10,6 @@ PyTorch implementation of paper: GaussNav: Gaussian Splatting for Visual Navigat
 
 Our GaussNav framework consists of three stages, including Frontier Exploration, Semantic Gaussian Construction and Gaussian Navigation. First, the agent employs Frontier Exploration to collect observations of the unknown environment. Second, the collected observations are used to construct Semantic Gaussian. By leveraging semantic segmentation algorithms, we assign semantic labels to each Gaussian. We then cluster Gaussians with their semantic labels and 3D positions, segmenting objects in the scene into different instances under various semantic categories. This representation is capable of preserving not only the 3D geometry of the scene and the semantic labels of each Gaussian, but also the texture details of the scene, thereby enabling novel view synthesis. Third, we render descriptive images for object instances, matching them with the goal image to effectively locate the target object. Upon determining the predicted goal object’s position, we can efficiently transform our Semantic Gaussian into grid map and employ path planning algorithms to accomplish the navigation.
 
-### This repository contains:
-
-The Gaussian Navigation module of GaussNav (which can be used for code base for either PointGoal task or the upper bound of planning-based methods of Instance ImageNav task).
-#### We will soon release the code of the Semantic Gaussian Construction module and previously constructed 3D model.
-
 ## Installing Dependencies
 - We use v0.2.3 of [habitat-sim](https://github.com/facebookresearch/habitat-sim), please follow the instructions to complete installation
 - Install habitat-lab:
@@ -58,6 +53,7 @@ python viz_scripts/final_recon_sem.py configs/habitat/habitat_splatam.py
 ## TODO list:
 - [x] release the code of Gaussian Navigation
 - [x] release the code of Semantic Gaussian Construction
+- [ ] release the code of collecting dataset from Habitat simulator 
 - [ ] release the model of previously constructed Semantic Gaussian
 
 
