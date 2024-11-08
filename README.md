@@ -4,7 +4,7 @@
 
 PyTorch implementation of paper: GaussNav: Gaussian Splatting for Visual Navigation
 
-[Project Page](https://xiaohanlei.github.io/projects/GaussNav/)<br />
+[Project Page](https://xiaohanlei.github.io/projects/GaussNav/)<br />[Paper](https://arxiv.org/abs/2403.11625)<br />[Dataset](https://drive.google.com/file/d/1zCOSS-F6SFjFbMY-oad2eGb7YdkxWNnY/view?usp=sharing)<br />
 
 ### Overview:
 
