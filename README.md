@@ -38,10 +38,14 @@ To verify that the data is setup correctly, run:
 cd GaussianNavigation
 python run.py
 ```
-To build Semantic Gaussian, run:
+We provide a test dataset using the rendered results from habitat. Download it from [google drive](https://drive.google.com/file/d/1zCOSS-F6SFjFbMY-oad2eGb7YdkxWNnY/view?usp=sharing) and place it under `GaussianConstruction/data/habitat/`. To build Semantic Gaussian, run:
 ```
 cd GaussianConstruction
 python scripts\\habitat_splatam.py configs\\habitat\\habitat_splatam.py
+```
+To visualize the Semantic Gaussian, run:
+```
+python viz_scripts/final_recon_sem.py configs/habitat/habitat_splatam.py
 ```
 
 ## Some tips
@@ -58,6 +62,8 @@ python scripts\\habitat_splatam.py configs\\habitat\\habitat_splatam.py
 
 
 This project is still under development. Please feel free to raise issues or submit pull requests to contribute to our codebase.
+
+GaussianConstruction builds upon [Splatam](https://github.com/spla-tam/SplaTAM), thanks for their great work!
 
 ### Bibtex:
 ```
