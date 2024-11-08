@@ -38,6 +38,11 @@ To verify that the data is setup correctly, run:
 cd GaussianNavigation
 python run.py
 ```
+To build Semantic Gaussian, run:
+```
+cd GaussianConstruction
+python scripts\\habitat_splatam.py configs\\habitat\\habitat_splatam.py
+```
 
 ## Some tips
 - If you want to use our code base to build your own project, you can write your own envs in `GaussianNavigation\vector_env\envs`
@@ -48,7 +53,7 @@ python run.py
 
 ## TODO list:
 - [x] release the code of Gaussian Navigation
-- [ ] release the code of Semantic Gaussian Construction
+- [x] release the code of Semantic Gaussian Construction
 - [ ] release the model of previously constructed Semantic Gaussian
 
 
