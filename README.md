@@ -44,6 +44,9 @@ To visualize the Semantic Gaussian, run:
 ```
 python viz_scripts/final_recon_sem.py configs/habitat/habitat_splatam.py
 ```
+After running the command, you should be able to get the following result:
+![image](https://github.com/user-attachments/assets/a77e7005-1091-46bd-8ff5-751bbf550b9e)
+
 
 ## Some tips
 - If you want to use our code base to build your own project, you can write your own envs in `GaussianNavigation\vector_env\envs`
